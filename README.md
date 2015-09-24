@@ -1,8 +1,7 @@
-# Only Numbers v1.0
+# JQuery Only Numbers 
 Plugin para permitir digitar somente números em um campo
 
-
-# Requerimentos
+# Requisitos
 
 **jQuery JavaScript Library v2.1.4**
 
@@ -10,3 +9,4 @@ Plugin para permitir digitar somente números em um campo
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 ```
 
+# 
