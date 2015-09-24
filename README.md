@@ -24,3 +24,11 @@ Inserir o plugin abaixo do jQuery
 	</body>
 </html>
 ```
+
+# Usando
+
+Insira o comando abaixo para disparar o evento em um input
+
+```script
+$('input').onlynumber();
+```
