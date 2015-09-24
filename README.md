@@ -42,3 +42,8 @@ $('input').onlynumber("destroy");
 **Cuidado:** 
 certificar sempre se o DOM foi totalmente carregado!
 
+```javascript
+$(document).ready(function(){
+    $('input').onlynumber();
+});
+```
