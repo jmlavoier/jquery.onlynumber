@@ -29,7 +29,3 @@ $.fn.onlynumber = (function(param) {
 	}
     	
 });
-
-
-
-
