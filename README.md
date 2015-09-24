@@ -29,6 +29,16 @@ Inserir o plugin abaixo do jQuery
 
 Insira o comando abaixo para disparar o evento em um input
 
-```script
+```javascript
 $('input').onlynumber();
 ```
+
+Caso necessário destuir o evento 
+
+```javascript
+$('input').onlynumber("destroy");
+```
+
+**Cuidado:** 
+certificar sempre se o DOM foi totalmente carregado!
+
