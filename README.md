@@ -1,4 +1,4 @@
-# JQuery Only Numbers 
+# jQuery Only Numbers 
 Plugin para permitir digitar somente números em um campo
 
 # Requisitos
