@@ -71,9 +71,6 @@ Inserindo o evento ao input *valores*:
 </html>
 ```
 
-
 # Autor
-
-## Authors
 
 [João M. Lavoier Fh.](https://github.com/jmlavoier)
