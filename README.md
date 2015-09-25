@@ -40,10 +40,33 @@ $('input').onlynumber("destroy");
 ```
 
 **Cuidado:** 
-certificar sempre se o DOM foi totalmente carregado!
+*certificar sempre se o DOM foi totalmente carregado*
 
 ```javascript
 $(document).ready(function(){
     $('input').onlynumber();
 });
+```
+
+# Exemplo
+
+Inserindo o evento ao input *valores*:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Testando JQuery Only Number 1.0</title>
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../jquery.onlynumber.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#valores").onlynumber(); 
+            });
+        </script>
+	</head>
+	<body>
+        <input type="text" id="valores" value="" />
+	</body>
+</html>
 ```
