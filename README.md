@@ -70,3 +70,10 @@ Inserindo o evento ao input *valores*:
 	</body>
 </html>
 ```
+
+
+# Autor
+
+## Authors
+
+[João M. Lavoier Fh.](https://github.com/jmlavoier)
