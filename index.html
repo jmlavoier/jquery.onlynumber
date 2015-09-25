@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Jquery.onlynumber by jmlavoier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Jquery.onlynumber</h1>
+      <h2 class="project-tagline">Plugin para teste da iClinic</h2>
+      <a href="https://github.com/jmlavoier/jquery.onlynumber" class="btn">View on GitHub</a>
+      <a href="https://github.com/jmlavoier/jquery.onlynumber/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/jmlavoier/jquery.onlynumber/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="jquery-only-number" class="anchor" href="#jquery-only-number" aria-hidden="true"><span class="octicon octicon-link"></span></a>jQuery Only Number</h1>
+
+<p>Plugin para permitir digitar somente números em um campo</p>
+
+<h1>
+<a id="requisitos" class="anchor" href="#requisitos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requisitos</h1>
+
+<p><strong>jQuery JavaScript Library v2.1.4</strong></p>
+
+<h1>
+<a id="instalação" class="anchor" href="#instala%C3%A7%C3%A3o" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instalação</h1>
+
+<p>Inserir o plugin abaixo do jQuery</p>
+
+<p><strong>Exemplo</strong></p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>en<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">head</span>&gt;
+        &lt;<span class="pl-ent">title</span>&gt;Testando JQuery Only Number 1.0&lt;/<span class="pl-ent">title</span>&gt;
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>../bower_components/jquery/dist/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>../jquery.onlynumber.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+    &lt;/<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+
+
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<h1>
+<a id="usando" class="anchor" href="#usando" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usando</h1>
+
+<p>Insira o comando abaixo para disparar o evento em um input</p>
+
+<div class="highlight highlight-source-js"><pre>$(<span class="pl-s"><span class="pl-pds">'</span>input<span class="pl-pds">'</span></span>).onlynumber();</pre></div>
+
+<p>Caso necessário destuir o evento </p>
+
+<div class="highlight highlight-source-js"><pre>$(<span class="pl-s"><span class="pl-pds">'</span>input<span class="pl-pds">'</span></span>).onlynumber(<span class="pl-s"><span class="pl-pds">"</span>destroy<span class="pl-pds">"</span></span>);</pre></div>
+
+<p><strong>Cuidado:</strong> 
+<em>certificar sempre se o DOM foi totalmente carregado</em></p>
+
+<div class="highlight highlight-source-js"><pre>$(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>(){
+    $(<span class="pl-s"><span class="pl-pds">'</span>input<span class="pl-pds">'</span></span>).onlynumber();
+});</pre></div>
+
+<h1>
+<a id="exemplo" class="anchor" href="#exemplo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exemplo</h1>
+
+<p>Inserindo o evento ao input <em>valores</em>:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>en<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">head</span>&gt;
+        &lt;<span class="pl-ent">title</span>&gt;Testando JQuery Only Number 1.0&lt;/<span class="pl-ent">title</span>&gt;
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/jquery/dist/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.onlynumber.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">            $(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>(){</span>
+<span class="pl-s1">                $(<span class="pl-s"><span class="pl-pds">"</span>#valores<span class="pl-pds">"</span></span>).onlynumber(); </span>
+<span class="pl-s1">            });</span>
+<span class="pl-s1">        &lt;/<span class="pl-ent">script</span>&gt;</span>
+    &lt;/<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>valores<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<h1>
+<a id="exemplo-2" class="anchor" href="#exemplo-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exemplo 2</h1>
+
+<p>Ativando e desativando o plugin usando o parametro <em>destroy</em></p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>en<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">title</span>&gt;Testando JQuery Only Number 1.0&lt;/<span class="pl-ent">title</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/jquery/dist/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.onlynumber.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">            $(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>(){</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">                $(<span class="pl-s"><span class="pl-pds">"</span>#ativadesativa<span class="pl-pds">"</span></span>).<span class="pl-c1">click</span>(<span class="pl-k">function</span>(){</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">                    <span class="pl-k">var</span> thisObj <span class="pl-k">=</span> $(<span class="pl-v">this</span>);</span>
+<span class="pl-s1">                    <span class="pl-k">var</span> ativo   <span class="pl-k">=</span> $(<span class="pl-v">this</span>).<span class="pl-c1">data</span>(<span class="pl-s"><span class="pl-pds">"</span>ativo<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">                    <span class="pl-c">//Se ativo desativa</span></span>
+<span class="pl-s1">                    <span class="pl-k">if</span> (ativo) </span>
+<span class="pl-s1">                    {</span>
+<span class="pl-s1">                        thisObj.<span class="pl-c1">data</span>(<span class="pl-s"><span class="pl-pds">"</span>ativo<span class="pl-pds">"</span></span>,<span class="pl-c1">0</span>).html(<span class="pl-s"><span class="pl-pds">"</span>Ativar<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s1">                        $(<span class="pl-s"><span class="pl-pds">"</span>#valores<span class="pl-pds">"</span></span>).onlynumber(<span class="pl-s"><span class="pl-pds">"</span>destroy<span class="pl-pds">"</span></span>); <span class="pl-c">//Destruindo</span></span>
+<span class="pl-s1"></span>
+<span class="pl-s1">                    }</span>
+<span class="pl-s1">                    <span class="pl-k">else</span> <span class="pl-c">//Se desativado ativa</span></span>
+<span class="pl-s1">                    {</span>
+<span class="pl-s1">                        thisObj.<span class="pl-c1">data</span>(<span class="pl-s"><span class="pl-pds">"</span>ativo<span class="pl-pds">"</span></span>,<span class="pl-c1">1</span>).html(<span class="pl-s"><span class="pl-pds">"</span>Desativar<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s1">                        $(<span class="pl-s"><span class="pl-pds">"</span>#valores<span class="pl-pds">"</span></span>).onlynumber(); <span class="pl-c">//Ativando</span></span>
+<span class="pl-s1">                    }</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">                    $(<span class="pl-s"><span class="pl-pds">"</span>#valores<span class="pl-pds">"</span></span>).<span class="pl-c1">focus</span>();</span>
+<span class="pl-s1">                });</span>
+<span class="pl-s1">            });</span>
+<span class="pl-s1">        &lt;/<span class="pl-ent">script</span>&gt;</span>
+    &lt;/<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+            &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>ativadesativa<span class="pl-pds">"</span></span> <span class="pl-e">data-ativo</span>=<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span> &gt;Ativar&lt;/<span class="pl-ent">button</span>&gt;
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>valores<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<h1>
+<a id="autor" class="anchor" href="#autor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Autor</h1>
+
+<p><a href="https://github.com/jmlavoier">João M. Lavoier Fh.</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jmlavoier/jquery.onlynumber">Jquery.onlynumber</a> is maintained by <a href="https://github.com/jmlavoier">jmlavoier</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
