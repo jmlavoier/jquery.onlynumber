@@ -6,11 +6,10 @@
 $.fn.onlynumber = (function(param) {
 	
 	var thisObj = $(this);
-	
     
     var keyuponlynumber = function(e){
         var keyCode = e.keyCode;
-        var exp     = /[^0-9]/g;
+        var exp     = /\D/g;
         var valor   = thisObj.val();
         
         //Não executa se clicou nas setas, enter, delete e backspace
@@ -18,7 +17,6 @@ $.fn.onlynumber = (function(param) {
             thisObj.val(valor.replace(exp,""));
         }
     }
-	
 	
 	if (param == 'destroy') { 
         //Se é para acabar com o evento

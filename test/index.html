@@ -7,10 +7,10 @@
         <script>
             $(document).ready(function(){
                 
-                $("#ativadesativa").click(function()
-                {
+                $("#ativadesativa").click(function(){
+                    
                     var thisObj = $(this);
-                    var ativo =  $(this).data("ativo");
+                    var ativo   = $(this).data("ativo");
                     
                     //Se ativo desativa
                     if (ativo) 
@@ -21,10 +21,11 @@
                     }
                     else //Se desativado ativa
                     {
-                        
                         thisObj.data("ativo",1).html("Desativar");
                         $("#valores").onlynumber(); //Ativando
                     }
+                    
+                    $("#valores").focus();
                 });
             });
         </script>
